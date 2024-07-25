@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Student Management System</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='styles.css') }}">
+</head>
+<body>
+    <div class="container">
+        <header>
+            <h1>project student</h1>
+            <p>project taha tehrani nasab </p>
+        </header>
+        <main>
+            <p>plast just one clike : </p>
+            <ul>
+                <li><a href="/students">all student list</a></li>
+                <li>
+                    <form action="/student" method="POST">
+                        <label for="id">student search ID:</label>
+                        <input type="number" name="id" required>
+                        <input type="submit" value="Submit">
+                    </form>
+                </li>
+                <li>
+                    <form action="/add_student" method="POST">
+                        <label for="name">name:</label>
+                        <input type="text" name="name" required>
+                        <label for="lastname"> lastname:</label>
+                        <input type="text" name="lastname" required>
+                        <label for="age">سن:</label>
+                        <input type="number" name="age" required>
+                        <input type="submit" value="Add student">
+                    </form>
+                </li>
+            </ul>
+        </main>
+    </div>
+</body>
+</html>
